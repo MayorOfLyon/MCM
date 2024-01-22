@@ -9,7 +9,7 @@ import seaborn as sns
 import warnings
 warnings.filterwarnings("ignore")
 
-# shittttttttttttttttt
+# fuckkkkkkkkkkkkk
 # read data
 ChinaBank = pd.read_csv('./data/ChinaBank.csv',index_col = 'Date',parse_dates=['Date'])
 # print(ChinaBank.head())
