@@ -1,0 +1,5 @@
+*.dat
+*.csv
+/data/
+/image_classification/
+/text_classification/
