@@ -23,3 +23,5 @@ centers = kmeans.cluster_centers_
 plt.scatter(centers[:, 0], centers[:, 1], c='red', marker='X', s=200, alpha=0.75)
 plt.title('KMeans Clustering')
 plt.show()
+
+print("hello world")
