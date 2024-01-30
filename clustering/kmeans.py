@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 from sklearn.datasets import make_blobs
 from sklearn.metrics import adjusted_rand_score
+from sklearn.metrics import silhouette_score
 
 # 生成模拟数据
 n_samples = 300
@@ -23,3 +24,7 @@ centers = kmeans.cluster_centers_
 plt.scatter(centers[:, 0], centers[:, 1], c='red', marker='X', s=200, alpha=0.75)
 plt.title('KMeans Clustering')
 plt.show()
+
+labels = kmeans.labels_
+silhouette_avg = silhouette_score(X, labels)
+print(f"Silhouette Score: {silhouette_avg}")

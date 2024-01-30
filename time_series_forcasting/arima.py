@@ -10,7 +10,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # read data
-ChinaBank = pd.read_csv('./data/ChinaBank.csv',index_col = 'Date',parse_dates=['Date'])
+ChinaBank = pd.read_csv('../data/ChinaBank.csv',index_col = 'Date',parse_dates=['Date'])
 # print(ChinaBank.head())
 ChinaBank.index = pd.to_datetime(ChinaBank.index)
 sub = ChinaBank.loc['2014-01':'2014-06','Close']
@@ -93,8 +93,8 @@ for p,q in itertools.product(range(p_min,p_max+1),range(q_min,q_max+1)):
     
 print(results_bic)
 bic_matrix = pd.DataFrame(results_bic) 
-p,q = bic_matrix.stack().idxmin() 
-print(u'BIC最小的p值和q值为：%s、%s' %(p,q))
+# p,q = bic_matrix.stack().idxmin() 
+# print(u'BIC最小的p值和q值为：%s、%s' %(p,q))
 
 # # 热力图
 # results_bic = results_bic[results_bic.columns].astype(float)
